@@ -1,0 +1,137 @@
+#!/bin/bash
+PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
+export PATH
+rm -- "$0" 
+rm -f CG
+clear;
+key=`wget http://dabml.87km.top/pass.php -O - -q ; echo`;
+echo -e "\033[35m=========================================================================\033[0m"
+echo -e "\033[33m                      大白一键综合脚本9.3日\033[0m"
+echo ""
+echo -e "\033[31m                     【大白官网dabml.87km.top】\033[0m"
+echo ""
+echo -e "\033[31m                       云免交流QQ群：307912370\033[0m"
+echo ""
+echo -e "\033[33m                           群成员免费开放使用\033[0m"
+echo ""
+echo -e "\033[35m==========================================================================\033[0m"
+echo -n -e "请输入群公告授权码 \033[0m ："
+read PASSWD
+readkey=$PASSWD
+if [[ ${readkey%%\ *} == $key ]]
+    then 
+	echo
+	echo -e "验证成功！"
+	else
+	echo -e "\033[31m验证失败！\033[0m"
+OPW='
+==========================================================================
+		   大白™服务授权失败，安装被终止
+
+			    大白6.X-7.0 安装失败
+			   Powered by dabml.87km.top 2016
+			      All Rights Reserved
+
+==========================================================================';
+echo "$OPW";
+exit
+    fi
+	if [ mod=1 ]
+	then
+echo -e "\033[33m=========================================================================\033[0m"
+echo -e "\033[36m                   欢迎使用大白一键OpenVPN脚本\033[0m"
+echo -e "\033[36m                     大白交流群：307912370\033[0m"
+echo ""
+echo -e "\033[31m                      【盗版无极限，统一酸菜面】\033[0m"
+echo ""
+echo -e "\033[32m        请选择安装版本：\033[0m"
+echo -e "\033[32m                       1.康师傅7.0脚本（9.3版）\033[0m"
+echo -e "\033[32m                       2.叮当猫7.0脚本（已修复）\033[0m"
+echo -e "\033[32m                       3.大猫哥7.0脚本（已修复）\033[0m"
+echo -e "\033[32m                       4.心悦7.0脚本（仅供把玩）\033[0m"
+echo -e "\033[32m                       5.变脸狗1.8 6.x脚本（原版）\033[0m"
+echo -e "\033[32m                       6.变脸狗2.2 6.x脚本（需云平台授权）\033[0m"    
+echo -e "\033[32m                       7.麒麟6.x脚本（变脸1.8）\033[0m"       
+echo -e "\033[32m                       n.群内更有系列等流控破解一键，欢迎加交流群\033[0m"  
+echo -e "\033[32m        流控附加功能：\033[0m"  
+echo -e "\033[32m                       8.一键搭建云端脚本\033[0m"  
+echo -e "\033[32m                       9.一键开138端口脚本\033[0m"    
+echo -e "\033[32m                       10.一键杂牌军加速脚本\033[0m"            
+echo -e "\033[31m                       CentOS6.4以下请先执行yum update -y\033[0m"
+echo -e "\033[31m                      注意：以上脚本大白均未测试，手动滑稽\033[0m"
+echo ""
+echo -e "\033[33m==========================================================================\033[0m"
+echo -n "输入选项: " 
+read mode
+
+if [[ $mode == "1" ]]     
+then
+echo -e "安装类型：\033[32m康师傅脚本\033[0m" ;  
+wget https://github.com/joe1280/zhonghe/raw/master/ksf.sh >/dev/null 2>&1
+bash ksf.sh
+fi
+
+if [[ $mode == "2" ]]     
+then     
+echo -e "安装类型：\033[32m叮当猫脚本\033[0m"; 
+wget https://github.com/joe1280/zhonghe/raw/master/ddm.sh >/dev/null 2>&1
+bash ddm.sh 
+fi
+
+if [[ $mode == "3" ]]     
+then     
+echo -e "安装类型：\033[32m大猫哥脚本\033[0m" ; 
+wget https://github.com/joe1280/zhonghe/raw/master/dm.sh >/dev/null 2>&1
+bash dm.sh   
+fi
+
+if [[ $mode == "4" ]]     
+then     
+echo -e "安装类型：\033[32m心悦脚本\033[0m" ;
+echo "103.217.253.62 sq.ly47.cn" >>/etc/hosts
+wgethttps://github.com/joe1280/zhonghe/raw/master/xin && bash xin 
+fi
+
+if [[ $mode == "5" ]]     
+then     
+echo -e "安装类型：\033[32m变脸狗脚本\033[0m" ;
+wget https://github.com/joe1280/zhonghe/raw/master/blg.sh >/dev/null 2>&1 
+bash blg.sh  
+fi
+
+if [[ $mode == "6" ]] 
+then
+echo -e "安装类型：\033[32m变脸狗脚本\033[0m" ; 
+wget  https://github.com/joe1280/zhonghe/raw/master/bldog.sh >/dev/null 2>&1
+bash bldog.sh
+fi
+
+if [[ $mode == "7" ]] 
+then
+echo -e "安装类型：\033[32m麒麟脚本\033[0m" ; 
+wget https://github.com/joe1280/zhonghe/raw/master/qilin.sh >/dev/null 2>&1
+bash qilin.sh
+fi
+
+if [[ $mode == "8" ]] 
+then
+echo -e "安装类型：\033[32m一键云端脚本\033[0m" ; 
+wget  https://github.com/joe1280/zhonghe/raw/master/yun.sh >/dev/null 2>&1
+bash yun.sh
+fi
+
+if [[ $mode == "9" ]] 
+then
+echo -e "安装类型：\033[32m一键开端口脚本\033[0m" ; 
+wget  https://github.com/joe1280/zhonghe/raw/master/m.sh && bash m.sh
+fi
+
+if [[ $mode == "10" ]] 
+then
+echo -e "安装类型：\033[32m一键加速脚本\033[0m" ; 
+wget  https://github.com/joe1280/zhonghe/raw/master/jiasu.sh >/dev/null 2>&1
+bash jiasu.sh
+fi
+fi
+rm -- "$0"
+exit 0;
